@@ -21,11 +21,26 @@ function createDragon(nameString, riderString, tempermentString) {
   };
   return dragonObject;
 }
+//----------------------------------------------//
+// greetRider
+/*
+Requirements:
+- Input(s): dragon object
+- Output(s): dynamic string greeting
+
+Pseudocode:
+- DEFINE FUNCTION: greetRider() with PARAMETER: dragonObject
+- RETURN: INTERPOLATED STRING: `Hi, ${dragonObject.rider}!`
+*/
+
+function greetRider(dragonObject) {
+  return `Hi, ${dragonObject.rider}!`;
+}
 
 
 module.exports = {
   createDragon, 
-  // greetRider, 
+  greetRider, 
   // eat, 
   // findFireBreathers
 }
