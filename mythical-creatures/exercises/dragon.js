@@ -68,10 +68,34 @@ function eat(dragonObject) {
   return dragonObject;
 }
 //----------------------------------------------//
+// findFireBreathers
+/*
+Requirements:
+- Input(s): array of dragon objects
+- Output(s): array of fire breathing dragons
+- NOTE: fire breathing dragons are identified by their aggressive temperment!
 
+Pseudocode:
+- DEFINE FUNCTION findFireBreathers() with PARAMETER: dragonObjectList
+- INITIALIZE VARIABLE: fireBreatherList with value of empty array
+- FOR LOOP: Iterate over dragonObjectList
+  - CONDITIONAL IF: evaluate if dragonObjectList[i].temperment === "aggressive"
+    - IF TRUE: METHOD: PUSH(): dragonObjectList[i] into fireBreatherList array
+- RETURN: fireBreatherList
+*/
+
+function findFireBreathers(dragonObjectList) {
+  let fireBreatherList = [];
+  for (let i = 0; i < dragonObjectList.length; i++) {
+    if (dragonObjectList[i].temperment === "aggressive") {
+      fireBreatherList.push(dragonObjectList[i]);
+    }
+  }
+  return fireBreatherList;
+}
 module.exports = {
   createDragon, 
   greetRider, 
   eat, 
-  // findFireBreathers
+  findFireBreathers
 }
